@@ -4,25 +4,14 @@ using UnityEngine;
 
 public class Strength : MonoBehaviour
 {
-    public int health = 10; //значение прочности предмета
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float health = 25f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Damage(int value)
+    public void Damage(float value)
     {
         health -= value;
-        if(health <= 0)
-        {// если прочность предмета меньше 0
-            Destroy(gameObject); // уничтожаем объект методом Destroy()
+        if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
