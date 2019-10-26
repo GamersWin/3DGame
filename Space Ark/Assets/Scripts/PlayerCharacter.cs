@@ -17,4 +17,14 @@ public class PlayerCharacter : MonoBehaviour
         }
         Debug.Log("Health: " + _health);
     }
+
+    public void ChangeHealth(int value)
+    {
+        _health += value;
+        if (_health > maxHealth)
+        {
+            _health = maxHealth;
+        }
+        Debug.Log(_health + "/" + maxHealth);
+    }
 }
