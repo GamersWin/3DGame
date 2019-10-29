@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AIEnemy : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class AIEnemy : MonoBehaviour
     public int damage = 5; //урон, наносимый персонажу
     public float maxDistance = 10.0f; //максимальная дистанция обнаружения героя
     public float minDistance = 1.0f;
+
+    public Text text;
 
     public float distance; //переменная для опр – я дистанции между игроком и врагом
     public Transform target; //объект, за которым будет следить враг
@@ -17,6 +20,7 @@ public class AIEnemy : MonoBehaviour
 
     private void Start()
     {
+        text.text = "Hello" + damage;
         _alive = true;
     }
     // Update is called once per frame
